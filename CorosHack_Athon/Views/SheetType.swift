@@ -63,7 +63,7 @@ enum SheetType: Int, CaseIterable, Identifiable {
         case .third: return AnyView(CommunityView())
         case .fourth: return AnyView(EventsView())
         case .fifth: return AnyView(SuccessStoriesView())
-        case .sixth: return AnyView(JobMarketView())
+        case .sixth: return AnyView(AddDataView())
         }
     }
 }
