@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33BB07A72DD358EA0033B7DC /* Engineer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07A62DD358EA0033B7DC /* Engineer.swift */; };
+		33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */; };
+		33BB07AB2DD35C320033B7DC /* EngineerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */; };
 		FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55879C2DD2F83B002E375C /* CorosHack_AthonApp.swift */; };
 		FA55879F2DD2F83B002E375C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55879E2DD2F83B002E375C /* HomeView.swift */; };
 		FA5587A12DD2F83C002E375C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5587A02DD2F83C002E375C /* Assets.xcassets */; };
@@ -18,7 +21,6 @@
 		FA5587BB2DD313D3002E375C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587BA2DD313D3002E375C /* TestView.swift */; };
 		FA5587BD2DD313F0002E375C /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587BC2DD313F0002E375C /* CommunityView.swift */; };
 		FA5587BF2DD31438002E375C /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587BE2DD31438002E375C /* EventsView.swift */; };
-		FA5587C12DD315AE002E375C /* SuccessStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C02DD315AE002E375C /* SuccessStoriesView.swift */; };
 		FA5587C32DD31608002E375C /* JobMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C22DD31608002E375C /* JobMarketView.swift */; };
 		FA5587C52DD31672002E375C /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C42DD31672002E375C /* LearningView.swift */; };
 		FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C72DD319AD002E375C /* CourseCard.swift */; };
@@ -43,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33BB07A62DD358EA0033B7DC /* Engineer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engineer.swift; sourceTree = "<group>"; };
+		33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerListView.swift; sourceTree = "<group>"; };
+		33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerDetailView.swift; sourceTree = "<group>"; };
 		FA5587992DD2F83B002E375C /* CorosHack_Athon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorosHack_Athon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA55879C2DD2F83B002E375C /* CorosHack_AthonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorosHack_AthonApp.swift; sourceTree = "<group>"; };
 		FA55879E2DD2F83B002E375C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -55,7 +60,6 @@
 		FA5587BA2DD313D3002E375C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		FA5587BC2DD313F0002E375C /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		FA5587BE2DD31438002E375C /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
-		FA5587C02DD315AE002E375C /* SuccessStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessStoriesView.swift; sourceTree = "<group>"; };
 		FA5587C22DD31608002E375C /* JobMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMarketView.swift; sourceTree = "<group>"; };
 		FA5587C42DD31672002E375C /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
 		FA5587C72DD319AD002E375C /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				FA5587D42DD325DB002E375C /* Course.swift */,
 				FA5587D62DD325F5002E375C /* Article.swift */,
 				FA5587F12DD3749C002E375C /* QuizQuestion.swift */,
+				33BB07A62DD358EA0033B7DC /* Engineer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,7 +238,8 @@
 		FA5587D02DD31FB0002E375C /* SuccessStories */ = {
 			isa = PBXGroup;
 			children = (
-				FA5587C02DD315AE002E375C /* SuccessStoriesView.swift */,
+				33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */,
+				33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */,
 			);
 			path = SuccessStories;
 			sourceTree = "<group>";
@@ -337,9 +343,12 @@
 				FA5587F22DD3749C002E375C /* QuizQuestion.swift in Sources */,
 				FA5587F02DD367AE002E375C /* QuizView.swift in Sources */,
 				FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */,
+				33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */,
 				FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */,
+				33BB07AB2DD35C320033B7DC /* EngineerDetailView.swift in Sources */,
 				FA5587C52DD31672002E375C /* LearningView.swift in Sources */,
 				FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */,
+				33BB07A72DD358EA0033B7DC /* Engineer.swift in Sources */,
 				FA5587D52DD325DB002E375C /* Course.swift in Sources */,
 				FA5587BD2DD313F0002E375C /* CommunityView.swift in Sources */,
 				FA5587CA2DD31E8F002E375C /* SheetType.swift in Sources */,
@@ -348,7 +357,6 @@
 				FA5587D32DD32478002E375C /* CourseDetailView.swift in Sources */,
 				FA5587EE2DD36561002E375C /* QuizIntroView.swift in Sources */,
 				FA5587B52DD30CBD002E375C /* WelcomeView.swift in Sources */,
-				FA5587C12DD315AE002E375C /* SuccessStoriesView.swift in Sources */,
 				FA5587D72DD325F5002E375C /* Article.swift in Sources */,
 				FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */,
 				FA5587BF2DD31438002E375C /* EventsView.swift in Sources */,
