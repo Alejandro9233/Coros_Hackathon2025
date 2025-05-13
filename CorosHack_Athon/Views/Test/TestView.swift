@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct TestView: View {
+    @StateObject private var viewModel = TestViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if viewModel.questions.isEmpty {
+                ProgressView("Cargando preguntas...")
+                    .onAppear {
+                        viewModel.fetchQuestions()
+                    }
+            } else if viewModel.isFinished {
+                ResultView(result: viewModel.calculateCareerResult(), onRestart: viewModel.resetTest)
+            } else {
+                QuestionCard(
+                    question: viewModel.questions[viewModel.currentIndex],
+                    onSelect: { selected in
+                        viewModel.selectAnswer(selected)
+                    }
+                )
+            }
+        }
+        .padding()
     }
 }
 
