@@ -9,26 +9,44 @@ import SwiftUI
 
 struct CourseDetailView: View {
     let courseId: String
+    var isCompleted: Bool
+    @ObservedObject var courseViewModel: CourseViewModel
+    
     @StateObject private var articleViewModel = ArticleViewModel()
     @StateObject private var quizViewModel = QuizViewModel()
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         TabView {
-            ForEach(articleViewModel.articles, id: \.id) { article in
-                ArticleView(article: article, presentationMode: presentationMode)
+            
+            if articleViewModel.articles.isEmpty {
+                ProgressView("Cargando información...")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+            } else {
+                
+                ForEach(articleViewModel.articles, id: \.id) { article in
+                    ArticleView(article: article, presentationMode: presentationMode)
+                }
+                
+                if isCompleted {
+                    QuizCompletedView()
+                } else {
+                    QuizIntroView(totalArticles: articleViewModel.articles.count, presentationMode: presentationMode)
+                    
+                    ForEach(quizViewModel.quizQuestions.indices, id: \.self) { index in
+                        QuizView(question: quizViewModel.quizQuestions[index].question,
+                                 options: quizViewModel.quizQuestions[index].options,
+                                 correctAnswerIndex: quizViewModel.quizQuestions[index].correctAnswerIndex,
+                                 currentQuizIndex: index + 1,
+                                 totalQuizzes: quizViewModel.quizQuestions.count,
+                                 presentationMode: presentationMode,
+                                 courseViewModel: courseViewModel,
+                                 courseId: courseId)
+                    }
+                }
             }
             
-            QuizIntroView(totalArticles: articleViewModel.articles.count, presentationMode: presentationMode)
-            
-            ForEach(quizViewModel.quizQuestions.indices, id: \.self) { index in
-                QuizView(question: quizViewModel.quizQuestions[index].question,
-                         options: quizViewModel.quizQuestions[index].options,
-                         correctAnswerIndex: quizViewModel.quizQuestions[index].correctAnswerIndex,
-                         currentQuizIndex: index + 1,
-                         totalQuizzes: quizViewModel.quizQuestions.count,
-                         presentationMode: presentationMode)
-            }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         .navigationBarHidden(true)
@@ -51,24 +69,23 @@ struct ArticleView: View {
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "xmark")
-                        .font(.title)
+                        .font(.title2)
                         .foregroundColor(.black)
+                        .padding()
                 }
-                
                 Spacer()
-                
+                Image(systemName: "graduationcap.circle.fill")
+                    .font(.title2)
+                    .foregroundColor(.purple)
                 Text("Learn")
                     .font(.headline)
                     .foregroundColor(.purple)
-                
                 Spacer()
-                
-                Button(action: {
-                    // Additional actions
-                }) {
+                Button(action: {}) {
                     Image(systemName: "ellipsis")
-                        .font(.title)
+                        .font(.title2)
                         .foregroundColor(.black)
+                        .padding()
                 }
             }
             .padding()

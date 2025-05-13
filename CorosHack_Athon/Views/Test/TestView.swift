@@ -17,15 +17,23 @@ struct TestView: View {
                     .onAppear {
                         viewModel.fetchQuestions()
                     }
+
             } else if viewModel.isFinished {
-                ResultView(result: viewModel.calculateCareerResult(), onRestart: viewModel.resetTest)
-            } else {
+                ResultView(
+                    result: viewModel.calculateCareerResult(),
+                    onRestart: viewModel.resetTest
+                )
+
+            } else if viewModel.currentIndex < viewModel.questions.count {
                 QuestionCard(
                     question: viewModel.questions[viewModel.currentIndex],
                     onSelect: { selected in
                         viewModel.selectAnswer(selected)
                     }
                 )
+
+            } else {
+                Text("Cargando pregunta...")
             }
         }
         .padding()
