@@ -24,6 +24,18 @@
 		FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C72DD319AD002E375C /* CourseCard.swift */; };
 		FA5587CA2DD31E8F002E375C /* SheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C92DD31E8F002E375C /* SheetType.swift */; };
 		FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587CB2DD31EB4002E375C /* InfoCard.swift */; };
+		FA5587D32DD32478002E375C /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587D22DD32478002E375C /* CourseDetailView.swift */; };
+		FA5587D52DD325DB002E375C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587D42DD325DB002E375C /* Course.swift */; };
+		FA5587D72DD325F5002E375C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587D62DD325F5002E375C /* Article.swift */; };
+		FA5587DC2DD32A35002E375C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA5587DB2DD32A35002E375C /* FirebaseCore */; };
+		FA5587DE2DD32A35002E375C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FA5587DD2DD32A35002E375C /* FirebaseFirestore */; };
+		FA5587E02DD32CF7002E375C /* CourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587DF2DD32CF7002E375C /* CourseService.swift */; };
+		FA5587E22DD32D15002E375C /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587E12DD32D15002E375C /* CourseViewModel.swift */; };
+		FA5587E42DD32D29002E375C /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587E32DD32D29002E375C /* ArticleViewModel.swift */; };
+		FA5587E62DD3334E002E375C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA5587E52DD3334E002E375C /* FirebaseAuth */; };
+		FA5587E82DD3334E002E375C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FA5587E72DD3334E002E375C /* FirebaseStorage */; };
+		FA5587EA2DD335AD002E375C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5587E92DD335AD002E375C /* GoogleService-Info.plist */; };
+		FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587EB2DD33E25002E375C /* AddDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +57,14 @@
 		FA5587C72DD319AD002E375C /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
 		FA5587C92DD31E8F002E375C /* SheetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetType.swift; sourceTree = "<group>"; };
 		FA5587CB2DD31EB4002E375C /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		FA5587D22DD32478002E375C /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		FA5587D42DD325DB002E375C /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		FA5587D62DD325F5002E375C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		FA5587DF2DD32CF7002E375C /* CourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseService.swift; sourceTree = "<group>"; };
+		FA5587E12DD32D15002E375C /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		FA5587E32DD32D29002E375C /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		FA5587E92DD335AD002E375C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA5587EB2DD33E25002E375C /* AddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5587DC2DD32A35002E375C /* FirebaseCore in Frameworks */,
+				FA5587E82DD3334E002E375C /* FirebaseStorage in Frameworks */,
+				FA5587E62DD3334E002E375C /* FirebaseAuth in Frameworks */,
+				FA5587DE2DD32A35002E375C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,11 +102,12 @@
 		FA55879B2DD2F83B002E375C /* CorosHack_Athon */ = {
 			isa = PBXGroup;
 			children = (
-				FA5587AC2DD308CD002E375C /* Views */,
 				FA5587AF2DD3092E002E375C /* Helpers */,
+				FA5587AC2DD308CD002E375C /* Views */,
 				FA5587AE2DD308FA002E375C /* ViewModels */,
 				FA5587AD2DD308ED002E375C /* Models */,
 				FA55879C2DD2F83B002E375C /* CorosHack_AthonApp.swift */,
+				FA5587E92DD335AD002E375C /* GoogleService-Info.plist */,
 				FA5587A02DD2F83C002E375C /* Assets.xcassets */,
 				FA5587B22DD30B26002E375C /* Backend */,
 				FA5587B32DD30B3C002E375C /* Firebase */,
@@ -113,6 +138,7 @@
 				FA5587B62DD30E3D002E375C /* ContentView.swift */,
 				FA5587C92DD31E8F002E375C /* SheetType.swift */,
 				FA5587CB2DD31EB4002E375C /* InfoCard.swift */,
+				FA5587EB2DD33E25002E375C /* AddDataView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +146,8 @@
 		FA5587AD2DD308ED002E375C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA5587D42DD325DB002E375C /* Course.swift */,
+				FA5587D62DD325F5002E375C /* Article.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +155,8 @@
 		FA5587AE2DD308FA002E375C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FA5587E12DD32D15002E375C /* CourseViewModel.swift */,
+				FA5587E32DD32D29002E375C /* ArticleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -149,6 +179,7 @@
 		FA5587B32DD30B3C002E375C /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				FA5587DF2DD32CF7002E375C /* CourseService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -158,6 +189,7 @@
 			children = (
 				FA5587C42DD31672002E375C /* LearningView.swift */,
 				FA5587C72DD319AD002E375C /* CourseCard.swift */,
+				FA5587D22DD32478002E375C /* CourseDetailView.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -218,6 +250,12 @@
 			dependencies = (
 			);
 			name = CorosHack_Athon;
+			packageProductDependencies = (
+				FA5587DB2DD32A35002E375C /* FirebaseCore */,
+				FA5587DD2DD32A35002E375C /* FirebaseFirestore */,
+				FA5587E52DD3334E002E375C /* FirebaseAuth */,
+				FA5587E72DD3334E002E375C /* FirebaseStorage */,
+			);
 			productName = CorosHack_Athon;
 			productReference = FA5587992DD2F83B002E375C /* CorosHack_Athon.app */;
 			productType = "com.apple.product-type.application";
@@ -246,6 +284,9 @@
 				Base,
 			);
 			mainGroup = FA5587902DD2F83B002E375C;
+			packageReferences = (
+				FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = FA55879A2DD2F83B002E375C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5587A42DD2F83C002E375C /* Preview Assets.xcassets in Resources */,
+				FA5587EA2DD335AD002E375C /* GoogleService-Info.plist in Resources */,
 				FA5587AB2DD3062D002E375C /* .gitignore in Resources */,
 				FA5587A12DD2F83C002E375C /* Assets.xcassets in Resources */,
 			);
@@ -275,16 +317,23 @@
 			files = (
 				FA5587BB2DD313D3002E375C /* TestView.swift in Sources */,
 				FA55879F2DD2F83B002E375C /* HomeView.swift in Sources */,
+				FA5587E02DD32CF7002E375C /* CourseService.swift in Sources */,
 				FA5587B72DD30E3D002E375C /* ContentView.swift in Sources */,
 				FA5587C32DD31608002E375C /* JobMarketView.swift in Sources */,
 				FA5587B12DD3094B002E375C /* ColorHelper.swift in Sources */,
+				FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */,
 				FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */,
 				FA5587C52DD31672002E375C /* LearningView.swift in Sources */,
 				FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */,
+				FA5587D52DD325DB002E375C /* Course.swift in Sources */,
 				FA5587BD2DD313F0002E375C /* CommunityView.swift in Sources */,
 				FA5587CA2DD31E8F002E375C /* SheetType.swift in Sources */,
+				FA5587E22DD32D15002E375C /* CourseViewModel.swift in Sources */,
+				FA5587E42DD32D29002E375C /* ArticleViewModel.swift in Sources */,
+				FA5587D32DD32478002E375C /* CourseDetailView.swift in Sources */,
 				FA5587B52DD30CBD002E375C /* WelcomeView.swift in Sources */,
 				FA5587C12DD315AE002E375C /* SuccessStoriesView.swift in Sources */,
+				FA5587D72DD325F5002E375C /* Article.swift in Sources */,
 				FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */,
 				FA5587BF2DD31438002E375C /* EventsView.swift in Sources */,
 			);
@@ -492,6 +541,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA5587DB2DD32A35002E375C /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		FA5587DD2DD32A35002E375C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FA5587E52DD3334E002E375C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FA5587E72DD3334E002E375C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA5587912DD2F83B002E375C /* Project object */;
 }

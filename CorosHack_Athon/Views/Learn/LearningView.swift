@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct LearningView: View {
-    let courses = [
-        ("world", "Intro to World", "12 Minutes", "4 Lessons"),
-        ("worldApp", "World App", "10 Minutes", "3 Lessons")
-    ]
+    @StateObject private var courseViewModel = CourseViewModel()
 
     var body: some View {
         NavigationView {
@@ -21,17 +18,23 @@ struct LearningView: View {
                         .font(.largeTitle)
                         .padding(.leading)
                     
-                    ForEach(courses, id: \.0) { course in
-                        CourseCard(
-                            imageName: course.0,
-                            courseName: course.1,
-                            duration: course.2,
-                            lessons: course.3)
+                    ForEach(courseViewModel.courses) { course in
+                        NavigationLink(destination: CourseDetailView(courseId: course.id)) {
+                            CourseCard(
+                                imageName: course.imageName,
+                                courseName: course.courseName,
+                                duration: course.duration,
+                                lessons: course.lessons
+                            )
+                        }
                     }
                 }
                 .padding(.top)
             }
             .navigationBarTitle("Learn", displayMode: .inline)
+            .onAppear {
+                courseViewModel.fetchCourses()
+            }
         }
     }
 }

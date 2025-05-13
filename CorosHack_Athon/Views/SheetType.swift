@@ -27,10 +27,10 @@ enum SheetType: Int, CaseIterable, Identifiable {
         switch self {
         case .first: return "graduationcap.fill"
         case .second: return "pencil.circle.fill"
-        case .third: return "briefcase.fill"
+        case .third: return "globe"
         case .fourth: return "calendar"
         case .fifth: return "star.fill"
-        case .sixth: return "globe"
+        case .sixth: return "briefcase.fill"
         }
     }
 
@@ -38,10 +38,10 @@ enum SheetType: Int, CaseIterable, Identifiable {
         switch self {
         case .first: return "Aprendizaje"
         case .second: return "Tomar Test"
-        case .third: return "Campo Laboral"
+        case .third: return "Comunidad"
         case .fourth: return "Eventos"
         case .fifth: return "Casos Exitosos"
-        case .sixth: return "Comunidad"
+        case .sixth: return "Campo Laboral"
         }
     }
 
@@ -49,10 +49,10 @@ enum SheetType: Int, CaseIterable, Identifiable {
         switch self {
         case .first: return "¡Descubre todo acerca de la ingeniería y las carreras más innovadoras de hoy en día que te pudieran interesar!"
         case .second: return "Realiza el test para evaluar tus conocimientos."
-        case .third: return "Aprende qué puedes realizar profesionalmente y donde ejercer tus conocimientos"
+        case .third: return "Conecta con otras personas"
         case .fourth: return "Encuentra los eventos más innovadores que está sucediendo en tu estado"
         case .fifth: return "¡Conoce su historia! Las Ingenieras que revolucionaron el mundo."
-        case .sixth: return "Conecta con otras personas"
+        case .sixth: return "Aprende qué puedes realizar profesionalmente y donde ejercer tus conocimientos"
         }
     }
 
@@ -60,10 +60,10 @@ enum SheetType: Int, CaseIterable, Identifiable {
         switch self {
         case .first: return AnyView(LearningView())
         case .second: return AnyView(TestView())
-        case .third: return AnyView(JobMarketView())
+        case .third: return AnyView(CommunityView())
         case .fourth: return AnyView(EventsView())
         case .fifth: return AnyView(SuccessStoriesView())
-        case .sixth: return AnyView(CommunityView())
+        case .sixth: return AnyView(AddDataView())
         }
     }
 }
