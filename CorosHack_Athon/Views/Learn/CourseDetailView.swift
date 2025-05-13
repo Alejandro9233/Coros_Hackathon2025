@@ -7,50 +7,59 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct CourseDetailView: View {
     let courseId: String
     var isCompleted: Bool
     @ObservedObject var courseViewModel: CourseViewModel
-    
+
     @StateObject private var articleViewModel = ArticleViewModel()
     @StateObject private var quizViewModel = QuizViewModel()
     @Environment(\.presentationMode) var presentationMode
+    @State private var selectedTab = 0 // ⭐️ Add this
 
     var body: some View {
-        TabView {
-            
+        TabView(selection: $selectedTab) {
+           
             if articleViewModel.articles.isEmpty {
-                ProgressView("Cargando información...")
-                    .frame(maxWidth: .infinity)
-                    .padding()
+                ProgressView()
             } else {
-                
-                ForEach(articleViewModel.articles, id: \.id) { article in
-                    ArticleView(article: article, presentationMode: presentationMode)
+                ForEach(articleViewModel.articles.indices, id: \.self) { index in
+                    ArticleView(article: articleViewModel.articles[index], presentationMode: presentationMode)
+                        .tag(index) // ⭐️ tag for tab selection
                 }
-                
+
+              
                 if isCompleted {
                     QuizCompletedView()
+                        .tag(articleViewModel.articles.count) // ⭐️ next tab index
                 } else {
                     QuizIntroView(totalArticles: articleViewModel.articles.count, presentationMode: presentationMode)
-                    
+                        .tag(articleViewModel.articles.count) // ⭐️ next tab index
+
                     ForEach(quizViewModel.quizQuestions.indices, id: \.self) { index in
-                        QuizView(question: quizViewModel.quizQuestions[index].question,
-                                 options: quizViewModel.quizQuestions[index].options,
-                                 correctAnswerIndex: quizViewModel.quizQuestions[index].correctAnswerIndex,
-                                 currentQuizIndex: index + 1,
-                                 totalQuizzes: quizViewModel.quizQuestions.count,
-                                 presentationMode: presentationMode,
-                                 courseViewModel: courseViewModel,
-                                 courseId: courseId)
+                        QuizView(
+                            question: quizViewModel.quizQuestions[index].question,
+                            options: quizViewModel.quizQuestions[index].options,
+                            correctAnswerIndex: quizViewModel.quizQuestions[index].correctAnswerIndex,
+                            currentQuizIndex: index + 1,
+                            totalQuizzes: quizViewModel.quizQuestions.count,
+                            presentationMode: presentationMode,
+                            courseViewModel: courseViewModel,
+                            courseId: courseId
+                        )
+                        .tag(articleViewModel.articles.count + 1 + index) // ⭐️ continuous index
                     }
                 }
             }
+            
             
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         .navigationBarHidden(true)
         .onAppear {
+            selectedTab = 0 // ✅ Always start at first article
             articleViewModel.fetchArticles(for: courseId)
             quizViewModel.fetchQuizQuestions(for: courseId)
         }
