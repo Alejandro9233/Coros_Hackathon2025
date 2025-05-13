@@ -47,5 +47,25 @@ class CourseService {
                 }
             }
     }
+    
+    func fetchQuizQuestions(for courseId: String, completion: @escaping ([QuizQuestion]) -> Void) {
+        db.collection("courses").document(courseId).collection("quizQuestions")
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Error fetching quiz questions: \(error)")
+                    completion([])
+                    return
+                }
+                
+                if let snapshot = snapshot {
+                    let questions = snapshot.documents.compactMap { document in
+                        try? document.data(as: QuizQuestion.self)
+                    }
+                    completion(questions)
+                } else {
+                    completion([])
+                }
+            }
+    }
 }
 

@@ -36,6 +36,10 @@
 		FA5587E82DD3334E002E375C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FA5587E72DD3334E002E375C /* FirebaseStorage */; };
 		FA5587EA2DD335AD002E375C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA5587E92DD335AD002E375C /* GoogleService-Info.plist */; };
 		FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587EB2DD33E25002E375C /* AddDataView.swift */; };
+		FA5587EE2DD36561002E375C /* QuizIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587ED2DD36561002E375C /* QuizIntroView.swift */; };
+		FA5587F02DD367AE002E375C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587EF2DD367AE002E375C /* QuizView.swift */; };
+		FA5587F22DD3749C002E375C /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587F12DD3749C002E375C /* QuizQuestion.swift */; };
+		FA5587F42DD3751F002E375C /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587F32DD3751F002E375C /* QuizViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,10 @@
 		FA5587E32DD32D29002E375C /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		FA5587E92DD335AD002E375C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA5587EB2DD33E25002E375C /* AddDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDataView.swift; sourceTree = "<group>"; };
+		FA5587ED2DD36561002E375C /* QuizIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizIntroView.swift; sourceTree = "<group>"; };
+		FA5587EF2DD367AE002E375C /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		FA5587F12DD3749C002E375C /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		FA5587F32DD3751F002E375C /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 			children = (
 				FA5587D42DD325DB002E375C /* Course.swift */,
 				FA5587D62DD325F5002E375C /* Article.swift */,
+				FA5587F12DD3749C002E375C /* QuizQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 			children = (
 				FA5587E12DD32D15002E375C /* CourseViewModel.swift */,
 				FA5587E32DD32D29002E375C /* ArticleViewModel.swift */,
+				FA5587F32DD3751F002E375C /* QuizViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -190,6 +200,8 @@
 				FA5587C42DD31672002E375C /* LearningView.swift */,
 				FA5587C72DD319AD002E375C /* CourseCard.swift */,
 				FA5587D22DD32478002E375C /* CourseDetailView.swift */,
+				FA5587ED2DD36561002E375C /* QuizIntroView.swift */,
+				FA5587EF2DD367AE002E375C /* QuizView.swift */,
 			);
 			path = Learn;
 			sourceTree = "<group>";
@@ -318,9 +330,12 @@
 				FA5587BB2DD313D3002E375C /* TestView.swift in Sources */,
 				FA55879F2DD2F83B002E375C /* HomeView.swift in Sources */,
 				FA5587E02DD32CF7002E375C /* CourseService.swift in Sources */,
+				FA5587F42DD3751F002E375C /* QuizViewModel.swift in Sources */,
 				FA5587B72DD30E3D002E375C /* ContentView.swift in Sources */,
 				FA5587C32DD31608002E375C /* JobMarketView.swift in Sources */,
 				FA5587B12DD3094B002E375C /* ColorHelper.swift in Sources */,
+				FA5587F22DD3749C002E375C /* QuizQuestion.swift in Sources */,
+				FA5587F02DD367AE002E375C /* QuizView.swift in Sources */,
 				FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */,
 				FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */,
 				FA5587C52DD31672002E375C /* LearningView.swift in Sources */,
@@ -331,6 +346,7 @@
 				FA5587E22DD32D15002E375C /* CourseViewModel.swift in Sources */,
 				FA5587E42DD32D29002E375C /* ArticleViewModel.swift in Sources */,
 				FA5587D32DD32478002E375C /* CourseDetailView.swift in Sources */,
+				FA5587EE2DD36561002E375C /* QuizIntroView.swift in Sources */,
 				FA5587B52DD30CBD002E375C /* WelcomeView.swift in Sources */,
 				FA5587C12DD315AE002E375C /* SuccessStoriesView.swift in Sources */,
 				FA5587D72DD325F5002E375C /* Article.swift in Sources */,
