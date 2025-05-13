@@ -24,7 +24,7 @@ struct LearningView: View {
                                 imageName: course.imageName,
                                 courseName: course.courseName,
                                 duration: course.duration,
-                                lessons: course.lessons
+                                questions: course.questions
                             )
                         }
                     }

@@ -28,16 +28,44 @@ class CourseService {
     }
     
     func fetchArticles(for courseId: String, completion: @escaping ([Article]) -> Void) {
-        db.collection("courses/\(courseId)/articles").getDocuments { (snapshot, error) in
-            guard let documents = snapshot?.documents else {
-                print("No articles found")
-                return
+        db.collection("courses").document(courseId).collection("articles")
+            .order(by: "index") // Order articles by index field
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Error fetching articles: \(error)")
+                    completion([]) // Return an empty array on error
+                    return
+                }
+                
+                if let snapshot = snapshot {
+                    let articles = snapshot.documents.compactMap { document in
+                        try? document.data(as: Article.self)
+                    }
+                    completion(articles) // Return the sorted articles
+                } else {
+                    completion([]) // Return an empty array if snapshot is nil
+                }
             }
-            let articles = documents.compactMap { (queryDocumentSnapshot) -> Article? in
-                return try? queryDocumentSnapshot.data(as: Article.self)
+    }
+    
+    func fetchQuizQuestions(for courseId: String, completion: @escaping ([QuizQuestion]) -> Void) {
+        db.collection("courses").document(courseId).collection("quizQuestions")
+            .getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Error fetching quiz questions: \(error)")
+                    completion([])
+                    return
+                }
+                
+                if let snapshot = snapshot {
+                    let questions = snapshot.documents.compactMap { document in
+                        try? document.data(as: QuizQuestion.self)
+                    }
+                    completion(questions)
+                } else {
+                    completion([])
+                }
             }
-            completion(articles)
-        }
     }
 }
 

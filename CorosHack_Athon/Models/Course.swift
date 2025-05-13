@@ -12,6 +12,6 @@ struct Course: Identifiable, Codable {
     let imageName: String
     let courseName: String
     let duration: String
-    let lessons: String
+    let questions: Int
 }
 
