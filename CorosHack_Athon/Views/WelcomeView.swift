@@ -4,15 +4,14 @@
 //
 //  Created by Alejandro  on 12/05/25.
 //
-
 import SwiftUI
 
 struct WelcomeView: View {
     @Binding var isHomeActive: Bool
+    @Binding var selectedSheet: SheetType?
 
     var body: some View {
         ZStack {
-            // Background Gradient
             LinearGradient(
                 gradient: Gradient(colors: [Color.purple, Color.blue.opacity(0.7), Color.teal]),
                 startPoint: .top,
@@ -21,18 +20,15 @@ struct WelcomeView: View {
             .ignoresSafeArea()
 
             VStack(spacing: 30) {
-                // Top Phrase
-                Text("FRASE ACÁ BIEN ACÁ")
+                Text("Un joven en ingeniería no solo rompe barreras: crea el camino por donde otros avanzarán.")
                     .font(.headline)
                     .foregroundColor(.white)
 
-                // Reflected Title
                 VStack(spacing: -30) {
                     Text("IMPULSA")
                         .font(.system(size: 60, weight: .bold))
                         .foregroundColor(.white)
 
-                    // Reflection
                     Text("IMPULSA")
                         .font(.system(size: 60, weight: .bold))
                         .foregroundColor(.white)
@@ -46,9 +42,11 @@ struct WelcomeView: View {
                         .padding(.bottom, 10)
                 }
 
-                // "Tomar test vocacional" Button
                 Button(action: {
-                    isHomeActive = true
+                    withAnimation {
+                        isHomeActive = true
+                        selectedSheet = .second
+                    }
                 }) {
                     Text("Tomar test vocacional")
                         .font(.title3)
@@ -61,18 +59,16 @@ struct WelcomeView: View {
                         .padding(.horizontal, 40)
                 }
 
-                // Subtext
                 Text("Al realizar el test puedes ganar un boleto de concierto")
                     .font(.footnote)
                     .foregroundColor(.white.opacity(0.8))
                     .padding(.horizontal, 40)
                     .multilineTextAlignment(.center)
 
-              
-
-                // Navigation Text
                 Button(action: {
-                    isHomeActive = true
+                    withAnimation {
+                        isHomeActive = true
+                    }
                 }) {
                     Text("Ir a la página principal")
                         .foregroundColor(.white)
@@ -82,11 +78,5 @@ struct WelcomeView: View {
             }
             .padding(.top, 60)
         }
-    }
-}
-
-struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        WelcomeView(isHomeActive: .constant(false))
     }
 }

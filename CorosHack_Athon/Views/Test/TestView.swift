@@ -18,7 +18,7 @@ struct TestView: View {
                         viewModel.fetchQuestions()
                     }
             } else if viewModel.isFinished {
-                ResultView(result: viewModel.calculateCareerResult(), onRestart: viewModel.resetTest)
+                ResultView(viewModel: viewModel, onRestart: viewModel.resetTest)
             } else {
                 QuestionCard(
                     question: viewModel.questions[viewModel.currentIndex],

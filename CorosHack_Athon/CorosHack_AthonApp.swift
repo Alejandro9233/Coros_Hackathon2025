@@ -23,7 +23,7 @@ struct CorosHack_AthonApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeWrapperView()
         }
     }
 }
