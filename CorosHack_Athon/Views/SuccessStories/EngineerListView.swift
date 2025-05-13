@@ -47,7 +47,7 @@ struct EngineerListView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Mujeres que Inspiran")
+            .navigationTitle("Ingenieras Revolucionarias")
             .fullScreenCover(item: $selectedEngineer) { engineer in
                             EngineerDetailView(engineer: engineer)
                         }
