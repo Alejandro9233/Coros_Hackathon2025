@@ -8,19 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55879C2DD2F83B002E375C /* CorosHack_AthonApp.swift */; };
-		FA55879F2DD2F83B002E375C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55879E2DD2F83B002E375C /* ContentView.swift */; };
+		FA55879F2DD2F83B002E375C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55879E2DD2F83B002E375C /* HomeView.swift */; };
 		FA5587A12DD2F83C002E375C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5587A02DD2F83C002E375C /* Assets.xcassets */; };
 		FA5587A42DD2F83C002E375C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5587A32DD2F83C002E375C /* Preview Assets.xcassets */; };
 		FA5587AB2DD3062D002E375C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FA5587AA2DD3062D002E375C /* .gitignore */; };
+		FA5587B12DD3094B002E375C /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587B02DD3094B002E375C /* ColorHelper.swift */; };
+		FA5587B52DD30CBD002E375C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587B42DD30CBD002E375C /* WelcomeView.swift */; };
+		FA5587B72DD30E3D002E375C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587B62DD30E3D002E375C /* ContentView.swift */; };
+		FA5587BB2DD313D3002E375C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587BA2DD313D3002E375C /* TestView.swift */; };
+		FA5587BD2DD313F0002E375C /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587BC2DD313F0002E375C /* CommunityView.swift */; };
+		FA5587BF2DD31438002E375C /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587BE2DD31438002E375C /* EventsView.swift */; };
+		FA5587C12DD315AE002E375C /* SuccessStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C02DD315AE002E375C /* SuccessStoriesView.swift */; };
+		FA5587C32DD31608002E375C /* JobMarketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C22DD31608002E375C /* JobMarketView.swift */; };
+		FA5587C52DD31672002E375C /* LearningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C42DD31672002E375C /* LearningView.swift */; };
+		FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C72DD319AD002E375C /* CourseCard.swift */; };
+		FA5587CA2DD31E8F002E375C /* SheetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587C92DD31E8F002E375C /* SheetType.swift */; };
+		FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587CB2DD31EB4002E375C /* InfoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA5587992DD2F83B002E375C /* CorosHack_Athon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorosHack_Athon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA55879C2DD2F83B002E375C /* CorosHack_AthonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorosHack_AthonApp.swift; sourceTree = "<group>"; };
-		FA55879E2DD2F83B002E375C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA55879E2DD2F83B002E375C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA5587A02DD2F83C002E375C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5587A32DD2F83C002E375C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA5587AA2DD3062D002E375C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FA5587B02DD3094B002E375C /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		FA5587B42DD30CBD002E375C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		FA5587B62DD30E3D002E375C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA5587BA2DD313D3002E375C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FA5587BC2DD313F0002E375C /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		FA5587BE2DD31438002E375C /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		FA5587C02DD315AE002E375C /* SuccessStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessStoriesView.swift; sourceTree = "<group>"; };
+		FA5587C22DD31608002E375C /* JobMarketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobMarketView.swift; sourceTree = "<group>"; };
+		FA5587C42DD31672002E375C /* LearningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningView.swift; sourceTree = "<group>"; };
+		FA5587C72DD319AD002E375C /* CourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCard.swift; sourceTree = "<group>"; };
+		FA5587C92DD31E8F002E375C /* SheetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetType.swift; sourceTree = "<group>"; };
+		FA5587CB2DD31EB4002E375C /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +78,14 @@
 		FA55879B2DD2F83B002E375C /* CorosHack_Athon */ = {
 			isa = PBXGroup;
 			children = (
+				FA5587AC2DD308CD002E375C /* Views */,
+				FA5587AF2DD3092E002E375C /* Helpers */,
+				FA5587AE2DD308FA002E375C /* ViewModels */,
+				FA5587AD2DD308ED002E375C /* Models */,
 				FA55879C2DD2F83B002E375C /* CorosHack_AthonApp.swift */,
-				FA55879E2DD2F83B002E375C /* ContentView.swift */,
 				FA5587A02DD2F83C002E375C /* Assets.xcassets */,
+				FA5587B22DD30B26002E375C /* Backend */,
+				FA5587B32DD30B3C002E375C /* Firebase */,
 				FA5587A22DD2F83C002E375C /* Preview Content */,
 			);
 			path = CorosHack_Athon;
@@ -68,6 +97,109 @@
 				FA5587A32DD2F83C002E375C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA5587AC2DD308CD002E375C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587D12DD31FF9002E375C /* JobMarket */,
+				FA5587D02DD31FB0002E375C /* SuccessStories */,
+				FA5587CF2DD31F9A002E375C /* Events */,
+				FA5587CE2DD31F6B002E375C /* Community */,
+				FA5587CD2DD31EE1002E375C /* Test */,
+				FA5587C62DD31970002E375C /* Learn */,
+				FA55879E2DD2F83B002E375C /* HomeView.swift */,
+				FA5587B42DD30CBD002E375C /* WelcomeView.swift */,
+				FA5587B62DD30E3D002E375C /* ContentView.swift */,
+				FA5587C92DD31E8F002E375C /* SheetType.swift */,
+				FA5587CB2DD31EB4002E375C /* InfoCard.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA5587AD2DD308ED002E375C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA5587AE2DD308FA002E375C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FA5587AF2DD3092E002E375C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587B02DD3094B002E375C /* ColorHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA5587B22DD30B26002E375C /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		FA5587B32DD30B3C002E375C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		FA5587C62DD31970002E375C /* Learn */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587C42DD31672002E375C /* LearningView.swift */,
+				FA5587C72DD319AD002E375C /* CourseCard.swift */,
+			);
+			path = Learn;
+			sourceTree = "<group>";
+		};
+		FA5587CD2DD31EE1002E375C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587BA2DD313D3002E375C /* TestView.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		FA5587CE2DD31F6B002E375C /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587BC2DD313F0002E375C /* CommunityView.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		FA5587CF2DD31F9A002E375C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587BE2DD31438002E375C /* EventsView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		FA5587D02DD31FB0002E375C /* SuccessStories */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587C02DD315AE002E375C /* SuccessStoriesView.swift */,
+			);
+			path = SuccessStories;
+			sourceTree = "<group>";
+		};
+		FA5587D12DD31FF9002E375C /* JobMarket */ = {
+			isa = PBXGroup;
+			children = (
+				FA5587C22DD31608002E375C /* JobMarketView.swift */,
+			);
+			path = JobMarket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +273,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA55879F2DD2F83B002E375C /* ContentView.swift in Sources */,
+				FA5587BB2DD313D3002E375C /* TestView.swift in Sources */,
+				FA55879F2DD2F83B002E375C /* HomeView.swift in Sources */,
+				FA5587B72DD30E3D002E375C /* ContentView.swift in Sources */,
+				FA5587C32DD31608002E375C /* JobMarketView.swift in Sources */,
+				FA5587B12DD3094B002E375C /* ColorHelper.swift in Sources */,
+				FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */,
+				FA5587C52DD31672002E375C /* LearningView.swift in Sources */,
 				FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */,
+				FA5587BD2DD313F0002E375C /* CommunityView.swift in Sources */,
+				FA5587CA2DD31E8F002E375C /* SheetType.swift in Sources */,
+				FA5587B52DD30CBD002E375C /* WelcomeView.swift in Sources */,
+				FA5587C12DD315AE002E375C /* SuccessStoriesView.swift in Sources */,
+				FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */,
+				FA5587BF2DD31438002E375C /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
