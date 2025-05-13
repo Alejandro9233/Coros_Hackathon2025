@@ -11,7 +11,7 @@ struct CourseCard: View {
     var imageName: String
     var courseName: String
     var duration: String
-    var lessons: String
+    var questions: Int // Changed to Int
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -26,7 +26,8 @@ struct CourseCard: View {
                 Text(courseName)
                     .font(.headline)
                 
-                Text("\(duration) • \(lessons)")
+                // Display the number of questions as a string
+                Text("\(duration) • \(questions) Questions") // Updated to display questions as Int
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 
@@ -46,7 +47,7 @@ struct CourseCard_Previews: PreviewProvider {
             imageName: "world",
             courseName: "Intro to World",
             duration: "12 Minutes",
-            lessons: "4 Lessons"
+            questions: 5 // Pass an Int for questions
         )
     }
 }
