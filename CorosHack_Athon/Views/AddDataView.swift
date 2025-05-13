@@ -20,6 +20,10 @@ struct AddDataView: View {
     @State private var articleTotal = 1
     @State private var courseId = ""
     
+    @State private var quizQuestionText = ""
+    @State private var quizOptions = ["", "", ""]
+    @State private var correctAnswerIndex = 0
+    
     @State private var courses: [Course] = []
     @State private var selectedCourseIndex = 0
     
@@ -69,6 +73,33 @@ struct AddDataView: View {
                         addArticle()
                     }
                 }
+                
+                Section(header: Text("Add Quiz Question")) {
+                    Picker("Select Course", selection: $selectedCourseIndex) {
+                        ForEach(0..<courses.count, id: \.self) { index in
+                            Text(courses[index].courseName).tag(index)
+                        }
+                    }
+                    
+                    TextField("Question", text: $quizQuestionText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    ForEach(0..<quizOptions.count, id: \.self) { index in
+                        TextField("Option \(index + 1)", text: $quizOptions[index])
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    }
+                    
+                    Picker("Correct Answer", selection: $correctAnswerIndex) {
+                        ForEach(0..<quizOptions.count, id: \.self) { index in
+                            Text("Option \(index + 1)").tag(index)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    
+                    Button("Add Quiz Question") {
+                        addQuizQuestion()
+                    }
+                }
             }
             .navigationTitle("Add Data")
             .onAppear(perform: fetchCourses)
@@ -109,6 +140,18 @@ struct AddDataView: View {
             print("Article added successfully")
         } catch {
             print("Error adding article: \(error)")
+        }
+    }
+    
+    private func addQuizQuestion() {
+        guard !courses.isEmpty else { return }
+        let selectedCourse = courses[selectedCourseIndex]
+        let quizQuestion = QuizQuestion(id: UUID().uuidString, question: quizQuestionText, options: quizOptions, correctAnswerIndex: correctAnswerIndex)
+        do {
+            try db.collection("courses").document(selectedCourse.id).collection("quizQuestions").document(quizQuestion.id).setData(from: quizQuestion)
+            print("Quiz question added successfully")
+        } catch {
+            print("Error adding quiz question: \(error)")
         }
     }
 }

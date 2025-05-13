@@ -10,6 +10,7 @@ import SwiftUI
 struct CourseDetailView: View {
     let courseId: String
     @StateObject private var articleViewModel = ArticleViewModel()
+    @StateObject private var quizViewModel = QuizViewModel()
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -17,14 +18,27 @@ struct CourseDetailView: View {
             ForEach(articleViewModel.articles, id: \.id) { article in
                 ArticleView(article: article, presentationMode: presentationMode)
             }
+            
+            QuizIntroView(totalArticles: articleViewModel.articles.count, presentationMode: presentationMode)
+            
+            ForEach(quizViewModel.quizQuestions.indices, id: \.self) { index in
+                QuizView(question: quizViewModel.quizQuestions[index].question,
+                         options: quizViewModel.quizQuestions[index].options,
+                         correctAnswerIndex: quizViewModel.quizQuestions[index].correctAnswerIndex,
+                         currentQuizIndex: index + 1,
+                         totalQuizzes: quizViewModel.quizQuestions.count,
+                         presentationMode: presentationMode)
+            }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
         .navigationBarHidden(true)
         .onAppear {
             articleViewModel.fetchArticles(for: courseId)
+            quizViewModel.fetchQuizQuestions(for: courseId)
         }
     }
 }
+
 
 struct ArticleView: View {
     let article: Article
