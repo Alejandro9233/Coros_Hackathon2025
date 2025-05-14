@@ -114,6 +114,14 @@ struct ArticleView: View {
                 .fontWeight(.bold)
                 .padding(.horizontal)
             
+            Image(article.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 200)
+                .clipped()
+                .cornerRadius(15)
+                .padding()
+            
             Text(article.content)
                 .font(.body)
                 .padding(.horizontal)

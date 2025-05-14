@@ -59,12 +59,6 @@ struct EventsView: View {
         }
     }
 
-    
-    var body: some View {
-        NavigationView {
-            Text("hola")
-        }
-    }
 }
 
 

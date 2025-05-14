@@ -13,5 +13,6 @@ struct Article: Identifiable, Codable {
     let total: Int
     let title: String
     let content: String
+    let imageName: String
 }
 
