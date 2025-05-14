@@ -4,17 +4,15 @@
 //
 //  Created by Alejandro  on 12/05/25.
 //
-
 import SwiftUI
 
 struct HomeView: View {
-    @State private var selectedSheet: SheetType?
+    @Binding var selectedSheet: SheetType?
     
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
-
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -26,7 +24,7 @@ struct HomeView: View {
                 Spacer()
                 
                 Button(action: {
-                    selectedSheet = .second 
+                    selectedSheet = .second
                 }) {
                     Text("Tomar Test")
                         .font(.headline)
@@ -38,20 +36,19 @@ struct HomeView: View {
             }
             .padding()
             
-            Text("1 de cada 15 mujeres estudia ingeniería, súmate al cambio")
+            Text("Cuando un joven elige la ingeniería, transforma no solo su futuro, sino el de toda la sociedad.")
                 .font(.title3)
                 .fontWeight(.bold)
                 .padding(.horizontal)
             
             Divider()
-                .frame(height: 2) // Thickness
-                .frame(maxWidth: 100) // Length
+                .frame(height: 2)
+                .frame(maxWidth: 100)
                 .background(Color.purple)
                 .padding(.horizontal)
             
             ScrollView {
                 VStack(spacing: 20) {
-                    // Top full-width card
                     if let aprendizaje = SheetType.allCases.first {
                         Button(action: {
                             selectedSheet = aprendizaje
@@ -60,11 +57,10 @@ struct HomeView: View {
                                      title: aprendizaje.cardTitle,
                                      description: aprendizaje.cardDescription,
                                      backgroundColor: .teal, height: 179)
-                            .frame(maxWidth: .infinity)
+                                .frame(maxWidth: .infinity)
                         }
                     }
 
-                    // Middle grid
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(SheetType.allCases.dropFirst().dropLast(), id: \.self) { sheet in
                             Button(action: {
@@ -79,7 +75,6 @@ struct HomeView: View {
                         }
                     }
 
-                    // Bottom full-width card
                     if let eventos = SheetType.allCases.last {
                         Button(action: {
                             selectedSheet = eventos
@@ -91,10 +86,7 @@ struct HomeView: View {
                                     .frame(width: 30, height: 30)
                                     .foregroundColor(.white)
                                     .padding(10)
-                                    .background(
-                                        Circle()
-                                            .fill(Color.white.opacity(0.2))
-                                    )
+                                    .background(Circle().fill(Color.white.opacity(0.2)))
 
                                 VStack(alignment: .leading, spacing: 6) {
                                     Text(eventos.cardTitle)
@@ -115,20 +107,12 @@ struct HomeView: View {
                             .cornerRadius(20)
                         }
                     }
-
                 }
                 .padding()
             }
-
         }
         .sheet(item: $selectedSheet) { sheet in
             sheet.view
         }
-    }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }
