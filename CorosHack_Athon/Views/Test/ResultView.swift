@@ -3,23 +3,26 @@ import SwiftUI
 struct ResultView: View {
     let viewModel: TestViewModel
     let onRestart: () -> Void
-    
+
+    struct RoleModel {
+        let name: String
+        let description: String
+    }
+
+    let roleModels: [RoleModel] = [
+        RoleModel(name: "Ada Lovelace", description: "Considerada la primera programadora de la historia, sentó las bases de la informática moderna."),
+        RoleModel(name: "Nikola Tesla", description: "Revolucionó la ingeniería eléctrica con sus aportes a la corriente alterna y la transmisión inalámbrica de energía."),
+        RoleModel(name: "Hedy Lamarr", description: "Inventora del espectro ensanchado, tecnología base del Wi-Fi y Bluetooth actual."),
+        RoleModel(name: "Elon Musk", description: "Ha impulsado avances en vehículos eléctricos, energía solar y exploración espacial a través de Tesla y SpaceX."),
+        RoleModel(name: "Grace Hopper", description: "Pionera del lenguaje de programación COBOL y una de las primeras mujeres almirante en la Marina de EE.UU."),
+        RoleModel(name: "Isambard Kingdom Brunel", description: "Transformó la ingeniería civil con sus diseños de puentes, túneles y locomotoras en el siglo XIX.")
+    ]
+
     var body: some View {
         let career = viewModel.calculateCareerResult()
-        print("📌 Carrera seleccionada: \(career)")
+        let selectedModel = roleModels.randomElement()!
 
-        let userValues = viewModel.extractUserValues()
-        print("📌 Valores del usuario: \(userValues)")
-
-        let matchingEngineer = viewModel.findMatchingEngineer(from: viewModel.engineers, forCareer: career)
-
-        if matchingEngineer == nil {
-            print("⚠️ No se encontró ingeniera alineada con la carrera \(career)")
-        } else {
-            print("✅ Ingeniera encontrada: \(matchingEngineer!.name)")
-        }
-
-        return ScrollView {
+        ScrollView {
             VStack(spacing: 24) {
                 Text("¡Tu carrera ideal es:")
                     .font(.title)
@@ -31,44 +34,33 @@ struct ResultView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal)
 
-                if let engineer = matchingEngineer {
-                    Divider()
+                Divider()
 
-                    VStack(spacing: 16) {
-                        Text("Tu inspiración:")
-                            .font(.headline)
+                VStack(spacing: 16) {
+                    Text("🎉 Felicidades!")
+                        .font(.headline)
 
-                        Text(engineer.name)
-                            .font(.title2)
-                            .fontWeight(.semibold)
+                    Text("Tus pensamientos ingenieriles se alinean con:")
+                        .font(.title3)
 
-                        if let desc = engineer.description {
-                            Text(desc)
-                                .font(.body)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
-                        }
+                    Text(selectedModel.name)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
 
-                        Text("Valores en común: \(Set(engineer.values).intersection(Set(userValues)).joined(separator: ", "))")
-                            .font(.footnote)
-                            .foregroundColor(.gray)
-                            .multilineTextAlignment(.center)
-                    }
+                    Text("Esta persona hizo esto en la ingeniería:")
+                        .font(.subheadline)
+
+                    Text("“\(selectedModel.description)”")
+                        .font(.body)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+
+                    Text("Y generó un increíble cambio en la sociedad ✨")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.center)
                 }
-
-
-        NavigationView {
-            
-            VStack(spacing: 24) {
-                Spacer()
-                Text("¡Tu carrera ideal es:")
-                    .font(.title)
-                
-                Text(result)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.purple)
-                
 
                 Button("Reiniciar test") {
                     onRestart()
@@ -78,19 +70,15 @@ struct ResultView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
 
-                
-                Spacer()
-                
                 NavigationLink(destination: LotteryResultView()) {
-                    HStack{
+                    HStack {
                         Text("Participar en Sorteo")
                             .foregroundColor(Color(hex: "#F2BC57"))
                             .underline()
-                        Image(systemName:"arrowshape.forward.circle.fill")
+                        Image(systemName: "arrowshape.forward.circle.fill")
                             .foregroundColor(Color(hex: "#F2BC57"))
                     }
                 }
-
             }
             .padding()
         }

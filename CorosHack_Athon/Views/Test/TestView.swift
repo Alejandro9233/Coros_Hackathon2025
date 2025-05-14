@@ -17,7 +17,6 @@ struct TestView: View {
                     .onAppear {
                         viewModel.fetchQuestions()
                     }
-
             } else if viewModel.isFinished {
                 ResultView(viewModel: viewModel, onRestart: viewModel.resetTest)
             } else {
@@ -27,9 +26,6 @@ struct TestView: View {
                         viewModel.selectAnswer(selected)
                     }
                 )
-
-            } else {
-                Text("Cargando pregunta...")
             }
         }
         .padding()
