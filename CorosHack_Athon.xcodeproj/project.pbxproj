@@ -10,6 +10,10 @@
 		3321D66C2DD3D28D0083A238 /* EngineerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D66B2DD3D28D0083A238 /* EngineerTest.swift */; };
 		3321D66E2DD3D60F0083A238 /* EngineerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D66D2DD3D60F0083A238 /* EngineerService.swift */; };
 		3321D6702DD40FE10083A238 /* HomeWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D66F2DD40FE10083A238 /* HomeWrapperView.swift */; };
+		3321D6722DD416CE0083A238 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D6712DD416CE0083A238 /* EventModel.swift */; };
+		3321D6742DD4212B0083A238 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D6732DD4212B0083A238 /* EventData.swift */; };
+		3321D6762DD422A00083A238 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D6752DD422A00083A238 /* EventsViewModel.swift */; };
+		3321D6782DD422E30083A238 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D6772DD422E30083A238 /* EventCard.swift */; };
 		33BB07A72DD358EA0033B7DC /* Engineer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07A62DD358EA0033B7DC /* Engineer.swift */; };
 		33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */; };
 		33BB07AB2DD35C320033B7DC /* EngineerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */; };
@@ -60,6 +64,10 @@
 		3321D66B2DD3D28D0083A238 /* EngineerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerTest.swift; sourceTree = "<group>"; };
 		3321D66D2DD3D60F0083A238 /* EngineerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerService.swift; sourceTree = "<group>"; };
 		3321D66F2DD40FE10083A238 /* HomeWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWrapperView.swift; sourceTree = "<group>"; };
+		3321D6712DD416CE0083A238 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		3321D6732DD4212B0083A238 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		3321D6752DD422A00083A238 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		3321D6772DD422E30083A238 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
 		33BB07A62DD358EA0033B7DC /* Engineer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engineer.swift; sourceTree = "<group>"; };
 		33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerListView.swift; sourceTree = "<group>"; };
 		33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerDetailView.swift; sourceTree = "<group>"; };
@@ -192,6 +200,7 @@
 				33BB07A62DD358EA0033B7DC /* Engineer.swift */,
 				FB9886042DD3A82C00E877C7 /* Question 2.swift */,
 				3321D66B2DD3D28D0083A238 /* EngineerTest.swift */,
+				3321D6712DD416CE0083A238 /* EventModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 				FA5587F32DD3751F002E375C /* QuizViewModel.swift */,
 				FB9886062DD3A83B00E877C7 /* TestViewModel.swift */,
 				FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */,
+				3321D6752DD422A00083A238 /* EventsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -267,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				FA5587BE2DD31438002E375C /* EventsView.swift */,
+				3321D6732DD4212B0083A238 /* EventData.swift */,
+				3321D6772DD422E30083A238 /* EventCard.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -384,6 +396,7 @@
 				33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */,
 				FA5587FA2DD3D62B002E375C /* MailHelper.swift in Sources */,
 				FB9885FF2DD3A7D900E877C7 /* QuestionCard.swift in Sources */,
+				3321D6782DD422E30083A238 /* EventCard.swift in Sources */,
 				FB9886012DD3A7F800E877C7 /* ResultView.swift in Sources */,
 				FB9886052DD3A82C00E877C7 /* Question 2.swift in Sources */,
 				FA5587CC2DD31EB4002E375C /* InfoCard.swift in Sources */,
@@ -407,7 +420,10 @@
 				FB9886032DD3A81800E877C7 /* TestService.swift in Sources */,
 				FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */,
 				3321D66E2DD3D60F0083A238 /* EngineerService.swift in Sources */,
+				3321D6722DD416CE0083A238 /* EventModel.swift in Sources */,
+				3321D6762DD422A00083A238 /* EventsViewModel.swift in Sources */,
 				FA5587BF2DD31438002E375C /* EventsView.swift in Sources */,
+				3321D6742DD4212B0083A238 /* EventData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
