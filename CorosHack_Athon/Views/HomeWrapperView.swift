@@ -1,19 +1,19 @@
 //
-//  ContentView.swift
+//  HomeWrapperView.swift
 //  CorosHack_Athon
 //
-//  Created by Alejandro  on 12/05/25.
+//  Created by Regina Cavazos Valdes on 13/05/25.
 //
 import SwiftUI
 
-struct ContentView: View {
+struct HomeWrapperView: View {
     @State private var isHomeActive = false
-    @State private var selectedSheet: SheetType? = nil  // <-- agrega esta línea
+    @State private var selectedSheet: SheetType? = nil
 
     var body: some View {
         ZStack {
             if isHomeActive {
-                HomeView(selectedSheet: $selectedSheet)  // <-- solución
+                HomeView(selectedSheet: $selectedSheet)
                     .transition(.opacity)
             } else {
                 WelcomeView(isHomeActive: $isHomeActive, selectedSheet: $selectedSheet)
@@ -21,11 +21,5 @@ struct ContentView: View {
             }
         }
         .animation(.easeInOut(duration: 0.5), value: isHomeActive)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
