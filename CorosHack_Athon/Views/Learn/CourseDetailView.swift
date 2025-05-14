@@ -32,7 +32,8 @@ struct CourseDetailView: View {
 
               
                 if isCompleted {
-                    QuizCompletedView()
+                    QuizCompletedView(courseViewModel: courseViewModel,
+                                       courseId: courseId)
                         .tag(articleViewModel.articles.count) // ⭐️ next tab index
                 } else {
                     QuizIntroView(totalArticles: articleViewModel.articles.count, presentationMode: presentationMode)
