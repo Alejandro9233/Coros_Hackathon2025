@@ -3,7 +3,7 @@ import SwiftUI
 struct ResultView: View {
     let viewModel: TestViewModel
     let onRestart: () -> Void
-
+    
     var body: some View {
         let career = viewModel.calculateCareerResult()
         print("📌 Carrera seleccionada: \(career)")
@@ -56,6 +56,20 @@ struct ResultView: View {
                     }
                 }
 
+
+        NavigationView {
+            
+            VStack(spacing: 24) {
+                Spacer()
+                Text("¡Tu carrera ideal es:")
+                    .font(.title)
+                
+                Text(result)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.purple)
+                
+
                 Button("Reiniciar test") {
                     onRestart()
                 }
@@ -63,6 +77,20 @@ struct ResultView: View {
                 .background(Color.purple)
                 .foregroundColor(.white)
                 .cornerRadius(10)
+
+                
+                Spacer()
+                
+                NavigationLink(destination: LotteryResultView()) {
+                    HStack{
+                        Text("Participar en Sorteo")
+                            .foregroundColor(Color(hex: "#F2BC57"))
+                            .underline()
+                        Image(systemName:"arrowshape.forward.circle.fill")
+                            .foregroundColor(Color(hex: "#F2BC57"))
+                    }
+                }
+
             }
             .padding()
         }
