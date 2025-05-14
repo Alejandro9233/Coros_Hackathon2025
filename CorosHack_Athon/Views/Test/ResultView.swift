@@ -1,17 +1,62 @@
-//
-//  ResultView.swift
-//  CorosHack_Athon
-//
-//  Created by Alumno on 13/05/25.
-//
-
 import SwiftUI
 
 struct ResultView: View {
-    let result: String
+    let viewModel: TestViewModel
     let onRestart: () -> Void
     
     var body: some View {
+        let career = viewModel.calculateCareerResult()
+        print("📌 Carrera seleccionada: \(career)")
+
+        let userValues = viewModel.extractUserValues()
+        print("📌 Valores del usuario: \(userValues)")
+
+        let matchingEngineer = viewModel.findMatchingEngineer(from: viewModel.engineers, forCareer: career)
+
+        if matchingEngineer == nil {
+            print("⚠️ No se encontró ingeniera alineada con la carrera \(career)")
+        } else {
+            print("✅ Ingeniera encontrada: \(matchingEngineer!.name)")
+        }
+
+        return ScrollView {
+            VStack(spacing: 24) {
+                Text("¡Tu carrera ideal es:")
+                    .font(.title)
+
+                Text(career)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.purple)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+
+                if let engineer = matchingEngineer {
+                    Divider()
+
+                    VStack(spacing: 16) {
+                        Text("Tu inspiración:")
+                            .font(.headline)
+
+                        Text(engineer.name)
+                            .font(.title2)
+                            .fontWeight(.semibold)
+
+                        if let desc = engineer.description {
+                            Text(desc)
+                                .font(.body)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                        }
+
+                        Text("Valores en común: \(Set(engineer.values).intersection(Set(userValues)).joined(separator: ", "))")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+
+
         NavigationView {
             
             VStack(spacing: 24) {
@@ -24,6 +69,7 @@ struct ResultView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.purple)
                 
+
                 Button("Reiniciar test") {
                     onRestart()
                 }
@@ -31,6 +77,7 @@ struct ResultView: View {
                 .background(Color.purple)
                 .foregroundColor(.white)
                 .cornerRadius(10)
+
                 
                 Spacer()
                 
@@ -43,6 +90,7 @@ struct ResultView: View {
                             .foregroundColor(Color(hex: "#F2BC57"))
                     }
                 }
+
             }
             .padding()
         }

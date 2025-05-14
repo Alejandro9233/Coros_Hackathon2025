@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3321D66C2DD3D28D0083A238 /* EngineerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D66B2DD3D28D0083A238 /* EngineerTest.swift */; };
+		3321D66E2DD3D60F0083A238 /* EngineerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D66D2DD3D60F0083A238 /* EngineerService.swift */; };
+		3321D6702DD40FE10083A238 /* HomeWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3321D66F2DD40FE10083A238 /* HomeWrapperView.swift */; };
 		33BB07A72DD358EA0033B7DC /* Engineer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07A62DD358EA0033B7DC /* Engineer.swift */; };
 		33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */; };
 		33BB07AB2DD35C320033B7DC /* EngineerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */; };
@@ -46,6 +49,10 @@
 		FA5587F82DD3D200002E375C /* TermsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587F72DD3D200002E375C /* TermsSheetView.swift */; };
 		FA5587FA2DD3D62B002E375C /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587F92DD3D62B002E375C /* MailHelper.swift */; };
 		FA5587FC2DD3E09B002E375C /* LotteryResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */; };
+		FA5587FE2DD4040D002E375C /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587FD2DD4040D002E375C /* Club.swift */; };
+		FA5588002DD40872002E375C /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587FF2DD40872002E375C /* CommunityService.swift */; };
+		FA5588022DD409A0002E375C /* CommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5588012DD409A0002E375C /* CommunityViewModel.swift */; };
+		FA5588042DD40AD7002E375C /* CreateClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5588032DD40AD7002E375C /* CreateClubView.swift */; };
 		FB9885FF2DD3A7D900E877C7 /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9885FE2DD3A7D900E877C7 /* QuestionCard.swift */; };
 		FB9886012DD3A7F800E877C7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886002DD3A7F800E877C7 /* ResultView.swift */; };
 		FB9886032DD3A81800E877C7 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886022DD3A81800E877C7 /* TestService.swift */; };
@@ -61,6 +68,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3321D66B2DD3D28D0083A238 /* EngineerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerTest.swift; sourceTree = "<group>"; };
+		3321D66D2DD3D60F0083A238 /* EngineerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerService.swift; sourceTree = "<group>"; };
+		3321D66F2DD40FE10083A238 /* HomeWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWrapperView.swift; sourceTree = "<group>"; };
 		33BB07A62DD358EA0033B7DC /* Engineer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engineer.swift; sourceTree = "<group>"; };
 		33BB07A82DD35BFE0033B7DC /* EngineerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerListView.swift; sourceTree = "<group>"; };
 		33BB07AA2DD35C320033B7DC /* EngineerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineerDetailView.swift; sourceTree = "<group>"; };
@@ -97,6 +107,10 @@
 		FA5587F72DD3D200002E375C /* TermsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsSheetView.swift; sourceTree = "<group>"; };
 		FA5587F92DD3D62B002E375C /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
 		FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryResultViewModel.swift; sourceTree = "<group>"; };
+		FA5587FD2DD4040D002E375C /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		FA5587FF2DD40872002E375C /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
+		FA5588012DD409A0002E375C /* CommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewModel.swift; sourceTree = "<group>"; };
+		FA5588032DD40AD7002E375C /* CreateClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClubView.swift; sourceTree = "<group>"; };
 		FB9885FE2DD3A7D900E877C7 /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
 		FB9886002DD3A7F800E877C7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		FB9886022DD3A81800E877C7 /* TestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
@@ -183,6 +197,8 @@
 				FA5587C92DD31E8F002E375C /* SheetType.swift */,
 				FA5587CB2DD31EB4002E375C /* InfoCard.swift */,
 				FA5587EB2DD33E25002E375C /* AddDataView.swift */,
+				3321D66D2DD3D60F0083A238 /* EngineerService.swift */,
+				3321D66F2DD40FE10083A238 /* HomeWrapperView.swift */,
 				FA5587F52DD3BA32002E375C /* LotteryResultView.swift */,
 				FA5587F72DD3D200002E375C /* TermsSheetView.swift */,
 			);
@@ -198,6 +214,8 @@
 				FA5587F12DD3749C002E375C /* QuizQuestion.swift */,
 				33BB07A62DD358EA0033B7DC /* Engineer.swift */,
 				FB9886042DD3A82C00E877C7 /* Question 2.swift */,
+				FA5587FD2DD4040D002E375C /* Club.swift */,
+				3321D66B2DD3D28D0083A238 /* EngineerTest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +229,7 @@
 				FA5587F32DD3751F002E375C /* QuizViewModel.swift */,
 				FB9886062DD3A83B00E877C7 /* TestViewModel.swift */,
 				FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */,
+				FA5588012DD409A0002E375C /* CommunityViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,6 +256,7 @@
 				FB98860A2DD3D2C000E877C7 /* EventService.swift */,
 				FA5587DF2DD32CF7002E375C /* CourseService.swift */,
 				FB9886022DD3A81800E877C7 /* TestService.swift */,
+				FA5587FF2DD40872002E375C /* CommunityService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -268,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5587BC2DD313F0002E375C /* CommunityView.swift */,
+				FA5588032DD40AD7002E375C /* CreateClubView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -396,7 +417,10 @@
 				FA5587F22DD3749C002E375C /* QuizQuestion.swift in Sources */,
 				FA5587F02DD367AE002E375C /* QuizView.swift in Sources */,
 				FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */,
+				3321D66C2DD3D28D0083A238 /* EngineerTest.swift in Sources */,
 				33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */,
+				FA5588042DD40AD7002E375C /* CreateClubView.swift in Sources */,
+				FA5588022DD409A0002E375C /* CommunityViewModel.swift in Sources */,
 				FA5587FA2DD3D62B002E375C /* MailHelper.swift in Sources */,
 				FB9885FF2DD3A7D900E877C7 /* QuestionCard.swift in Sources */,
 				FB9886012DD3A7F800E877C7 /* ResultView.swift in Sources */,
@@ -405,8 +429,10 @@
 				FA5587FC2DD3E09B002E375C /* LotteryResultViewModel.swift in Sources */,
 				33BB07AB2DD35C320033B7DC /* EngineerDetailView.swift in Sources */,
 				FA5587C52DD31672002E375C /* LearningView.swift in Sources */,
+				FA5587FE2DD4040D002E375C /* Club.swift in Sources */,
 				FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */,
 				33BB07A72DD358EA0033B7DC /* Engineer.swift in Sources */,
+				3321D6702DD40FE10083A238 /* HomeWrapperView.swift in Sources */,
 				FA5587D52DD325DB002E375C /* Course.swift in Sources */,
 				FA5587BD2DD313F0002E375C /* CommunityView.swift in Sources */,
 				FA5587CA2DD31E8F002E375C /* SheetType.swift in Sources */,
@@ -423,7 +449,9 @@
 				FB98860D2DD3D2F100E877C7 /* EventViewModel.swift in Sources */,
 				FB9886142DD3F1B400E877C7 /* QuizCompletedView.swift in Sources */,
 				FB98860F2DD3D30B00E877C7 /* EventCard.swift in Sources */,
+				3321D66E2DD3D60F0083A238 /* EngineerService.swift in Sources */,
 				FA5587BF2DD31438002E375C /* EventsView.swift in Sources */,
+				FA5588002DD40872002E375C /* CommunityService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CorosHack_Athon/Preview Content\"";
-				DEVELOPMENT_TEAM = 8V2JH6CUZV;
+				DEVELOPMENT_TEAM = Q57GBHD7SY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -570,7 +598,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alejandro.CorosHack-Athon";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alejandro.CorosHack-Athon1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -586,7 +614,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CorosHack_Athon/Preview Content\"";
-				DEVELOPMENT_TEAM = 8V2JH6CUZV;
+				DEVELOPMENT_TEAM = Q57GBHD7SY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -599,7 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alejandro.CorosHack-Athon";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alejandro.CorosHack-Athon1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

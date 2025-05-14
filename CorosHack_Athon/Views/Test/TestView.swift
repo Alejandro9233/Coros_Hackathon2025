@@ -19,12 +19,8 @@ struct TestView: View {
                     }
 
             } else if viewModel.isFinished {
-                ResultView(
-                    result: viewModel.calculateCareerResult(),
-                    onRestart: viewModel.resetTest
-                )
-
-            } else if viewModel.currentIndex < viewModel.questions.count {
+                ResultView(viewModel: viewModel, onRestart: viewModel.resetTest)
+            } else {
                 QuestionCard(
                     question: viewModel.questions[viewModel.currentIndex],
                     onSelect: { selected in
