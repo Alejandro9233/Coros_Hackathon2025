@@ -20,9 +20,6 @@ struct WelcomeView: View {
             .ignoresSafeArea()
 
             VStack(spacing: 30) {
-                Text("Un joven en ingeniería no solo rompe barreras: crea el camino por donde otros avanzarán.")
-                    .font(.headline)
-                    .foregroundColor(.white)
 
                 VStack(spacing: -30) {
                     Text("IMPULSA")

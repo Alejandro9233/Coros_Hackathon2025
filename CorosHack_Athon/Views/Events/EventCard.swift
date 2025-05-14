@@ -17,11 +17,12 @@ struct EventCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             // Placeholder for event image
-            Rectangle()
-                .fill(Color.gray.opacity(0.3))
+            Image(event.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
                 .frame(height: 150)
-                .cornerRadius(8)
-                .overlay(Text("🖼 Imagen aquí").foregroundColor(.gray))
+                .clipped()
+                .cornerRadius(15)
 
             // Text content
             VStack(alignment: .leading, spacing: 6) {
