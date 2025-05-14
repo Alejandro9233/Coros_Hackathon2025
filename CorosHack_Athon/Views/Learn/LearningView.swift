@@ -14,24 +14,34 @@ struct LearningView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    Text("Courses")
+                    Text("Cursos")
                         .font(.largeTitle)
                         .padding(.leading)
                     
-                    ForEach(courseViewModel.courses) { course in
-                        NavigationLink(destination: CourseDetailView(courseId: course.id)) {
-                            CourseCard(
-                                imageName: course.imageName,
-                                courseName: course.courseName,
-                                duration: course.duration,
-                                questions: course.questions
-                            )
-                        }
+                    if courseViewModel.displayCourses.isEmpty {
+                        ProgressView("Cargando cursos...")
+                            .frame(maxWidth: .infinity)
+                            .padding()
                     }
+                        else {
+                            
+                            ForEach(courseViewModel.displayCourses) { displayCourse in
+                                NavigationLink(destination: CourseDetailView(courseId: displayCourse.course.id, isCompleted: displayCourse.isCompleted, courseViewModel: courseViewModel))  {
+                                    CourseCard(
+                                        imageName: displayCourse.course.imageName,
+                                        courseName: displayCourse.course.courseName,
+                                        duration: displayCourse.course.duration,
+                                        questions: displayCourse.course.questions,
+                                        isCompleted: displayCourse.isCompleted
+                                    )
+                                }
+                            }
+
+                        }
                 }
                 .padding(.top)
             }
-            .navigationBarTitle("Learn", displayMode: .inline)
+            .navigationBarTitle("Aprendizaje", displayMode: .inline)
             .onAppear {
                 courseViewModel.fetchCourses()
             }

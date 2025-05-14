@@ -53,11 +53,22 @@
 		FA5587F82DD3D200002E375C /* TermsSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587F72DD3D200002E375C /* TermsSheetView.swift */; };
 		FA5587FA2DD3D62B002E375C /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587F92DD3D62B002E375C /* MailHelper.swift */; };
 		FA5587FC2DD3E09B002E375C /* LotteryResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */; };
+		FA5587FE2DD4040D002E375C /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587FD2DD4040D002E375C /* Club.swift */; };
+		FA5588002DD40872002E375C /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5587FF2DD40872002E375C /* CommunityService.swift */; };
+		FA5588022DD409A0002E375C /* CommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5588012DD409A0002E375C /* CommunityViewModel.swift */; };
+		FA5588042DD40AD7002E375C /* CreateClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5588032DD40AD7002E375C /* CreateClubView.swift */; };
 		FB9885FF2DD3A7D900E877C7 /* QuestionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9885FE2DD3A7D900E877C7 /* QuestionCard.swift */; };
 		FB9886012DD3A7F800E877C7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886002DD3A7F800E877C7 /* ResultView.swift */; };
 		FB9886032DD3A81800E877C7 /* TestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886022DD3A81800E877C7 /* TestService.swift */; };
 		FB9886052DD3A82C00E877C7 /* Question 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886042DD3A82C00E877C7 /* Question 2.swift */; };
 		FB9886072DD3A83B00E877C7 /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886062DD3A83B00E877C7 /* TestViewModel.swift */; };
+		FB9886092DD3D0CD00E877C7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886082DD3D0CA00E877C7 /* Event.swift */; };
+		FB98860B2DD3D2C400E877C7 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98860A2DD3D2C000E877C7 /* EventService.swift */; };
+		FB98860D2DD3D2F100E877C7 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98860C2DD3D2ED00E877C7 /* EventViewModel.swift */; };
+		FB98860F2DD3D30B00E877C7 /* EventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98860E2DD3D30700E877C7 /* EventCard.swift */; };
+		FB9886122DD3D34B00E877C7 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886112DD3D34500E877C7 /* EventDetailView.swift */; };
+		FB9886142DD3F1B400E877C7 /* QuizCompletedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9886132DD3F1AD00E877C7 /* QuizCompletedView.swift */; };
+		FB9886172DD3F7FD00E877C7 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FB9886162DD3F7FD00E877C7 /* ConfettiSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,11 +115,21 @@
 		FA5587F72DD3D200002E375C /* TermsSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsSheetView.swift; sourceTree = "<group>"; };
 		FA5587F92DD3D62B002E375C /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
 		FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryResultViewModel.swift; sourceTree = "<group>"; };
+		FA5587FD2DD4040D002E375C /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		FA5587FF2DD40872002E375C /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
+		FA5588012DD409A0002E375C /* CommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewModel.swift; sourceTree = "<group>"; };
+		FA5588032DD40AD7002E375C /* CreateClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClubView.swift; sourceTree = "<group>"; };
 		FB9885FE2DD3A7D900E877C7 /* QuestionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCard.swift; sourceTree = "<group>"; };
 		FB9886002DD3A7F800E877C7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		FB9886022DD3A81800E877C7 /* TestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestService.swift; sourceTree = "<group>"; };
 		FB9886042DD3A82C00E877C7 /* Question 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question 2.swift"; sourceTree = "<group>"; };
 		FB9886062DD3A83B00E877C7 /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		FB9886082DD3D0CA00E877C7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		FB98860A2DD3D2C000E877C7 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		FB98860C2DD3D2ED00E877C7 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		FB98860E2DD3D30700E877C7 /* EventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCard.swift; sourceTree = "<group>"; };
+		FB9886112DD3D34500E877C7 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		FB9886132DD3F1AD00E877C7 /* QuizCompletedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCompletedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB9886172DD3F7FD00E877C7 /* ConfettiSwiftUI in Frameworks */,
 				FA5587DC2DD32A35002E375C /* FirebaseCore in Frameworks */,
 				FA5587E82DD3334E002E375C /* FirebaseStorage in Frameworks */,
 				FA5587E62DD3334E002E375C /* FirebaseAuth in Frameworks */,
@@ -194,11 +216,13 @@
 		FA5587AD2DD308ED002E375C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FB9886082DD3D0CA00E877C7 /* Event.swift */,
 				FA5587D42DD325DB002E375C /* Course.swift */,
 				FA5587D62DD325F5002E375C /* Article.swift */,
 				FA5587F12DD3749C002E375C /* QuizQuestion.swift */,
 				33BB07A62DD358EA0033B7DC /* Engineer.swift */,
 				FB9886042DD3A82C00E877C7 /* Question 2.swift */,
+				FA5587FD2DD4040D002E375C /* Club.swift */,
 				3321D66B2DD3D28D0083A238 /* EngineerTest.swift */,
 				3321D6712DD416CE0083A238 /* EventModel.swift */,
 			);
@@ -208,12 +232,16 @@
 		FA5587AE2DD308FA002E375C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FB98860C2DD3D2ED00E877C7 /* EventViewModel.swift */,
 				FA5587E12DD32D15002E375C /* CourseViewModel.swift */,
 				FA5587E32DD32D29002E375C /* ArticleViewModel.swift */,
 				FA5587F32DD3751F002E375C /* QuizViewModel.swift */,
 				FB9886062DD3A83B00E877C7 /* TestViewModel.swift */,
 				FA5587FB2DD3E09B002E375C /* LotteryResultViewModel.swift */,
 				3321D6752DD422A00083A238 /* EventsViewModel.swift */,
+
+				FA5588012DD409A0002E375C /* CommunityViewModel.swift */,
+
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,8 +265,10 @@
 		FA5587B32DD30B3C002E375C /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				FB98860A2DD3D2C000E877C7 /* EventService.swift */,
 				FA5587DF2DD32CF7002E375C /* CourseService.swift */,
 				FB9886022DD3A81800E877C7 /* TestService.swift */,
+				FA5587FF2DD40872002E375C /* CommunityService.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -246,6 +276,7 @@
 		FA5587C62DD31970002E375C /* Learn */ = {
 			isa = PBXGroup;
 			children = (
+				FB9886132DD3F1AD00E877C7 /* QuizCompletedView.swift */,
 				FA5587C42DD31672002E375C /* LearningView.swift */,
 				FA5587C72DD319AD002E375C /* CourseCard.swift */,
 				FA5587D22DD32478002E375C /* CourseDetailView.swift */,
@@ -269,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5587BC2DD313F0002E375C /* CommunityView.swift */,
+				FA5588032DD40AD7002E375C /* CreateClubView.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -276,6 +308,8 @@
 		FA5587CF2DD31F9A002E375C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				FB9886112DD3D34500E877C7 /* EventDetailView.swift */,
+				FB98860E2DD3D30700E877C7 /* EventCard.swift */,
 				FA5587BE2DD31438002E375C /* EventsView.swift */,
 				3321D6732DD4212B0083A238 /* EventData.swift */,
 				3321D6772DD422E30083A238 /* EventCard.swift */,
@@ -321,6 +355,7 @@
 				FA5587DD2DD32A35002E375C /* FirebaseFirestore */,
 				FA5587E52DD3334E002E375C /* FirebaseAuth */,
 				FA5587E72DD3334E002E375C /* FirebaseStorage */,
+				FB9886162DD3F7FD00E877C7 /* ConfettiSwiftUI */,
 			);
 			productName = CorosHack_Athon;
 			productReference = FA5587992DD2F83B002E375C /* CorosHack_Athon.app */;
@@ -352,6 +387,7 @@
 			mainGroup = FA5587902DD2F83B002E375C;
 			packageReferences = (
 				FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FB9886152DD3F7FD00E877C7 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = FA55879A2DD2F83B002E375C /* Products */;
 			projectDirPath = "";
@@ -382,6 +418,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5587BB2DD313D3002E375C /* TestView.swift in Sources */,
+				FB9886122DD3D34B00E877C7 /* EventDetailView.swift in Sources */,
+				FB9886092DD3D0CD00E877C7 /* Event.swift in Sources */,
+				FB98860B2DD3D2C400E877C7 /* EventService.swift in Sources */,
 				FA55879F2DD2F83B002E375C /* HomeView.swift in Sources */,
 				FA5587F62DD3BA32002E375C /* LotteryResultView.swift in Sources */,
 				FA5587E02DD32CF7002E375C /* CourseService.swift in Sources */,
@@ -394,6 +433,8 @@
 				FA5587EC2DD33E25002E375C /* AddDataView.swift in Sources */,
 				3321D66C2DD3D28D0083A238 /* EngineerTest.swift in Sources */,
 				33BB07A92DD35BFE0033B7DC /* EngineerListView.swift in Sources */,
+				FA5588042DD40AD7002E375C /* CreateClubView.swift in Sources */,
+				FA5588022DD409A0002E375C /* CommunityViewModel.swift in Sources */,
 				FA5587FA2DD3D62B002E375C /* MailHelper.swift in Sources */,
 				FB9885FF2DD3A7D900E877C7 /* QuestionCard.swift in Sources */,
 				3321D6782DD422E30083A238 /* EventCard.swift in Sources */,
@@ -403,6 +444,7 @@
 				FA5587FC2DD3E09B002E375C /* LotteryResultViewModel.swift in Sources */,
 				33BB07AB2DD35C320033B7DC /* EngineerDetailView.swift in Sources */,
 				FA5587C52DD31672002E375C /* LearningView.swift in Sources */,
+				FA5587FE2DD4040D002E375C /* Club.swift in Sources */,
 				FA55879D2DD2F83B002E375C /* CorosHack_AthonApp.swift in Sources */,
 				33BB07A72DD358EA0033B7DC /* Engineer.swift in Sources */,
 				3321D6702DD40FE10083A238 /* HomeWrapperView.swift in Sources */,
@@ -419,11 +461,18 @@
 				FA5587D72DD325F5002E375C /* Article.swift in Sources */,
 				FB9886032DD3A81800E877C7 /* TestService.swift in Sources */,
 				FA5587C82DD319AD002E375C /* CourseCard.swift in Sources */,
+				FB98860D2DD3D2F100E877C7 /* EventViewModel.swift in Sources */,
+				FB9886142DD3F1B400E877C7 /* QuizCompletedView.swift in Sources */,
+				FB98860F2DD3D30B00E877C7 /* EventCard.swift in Sources */,
 				3321D66E2DD3D60F0083A238 /* EngineerService.swift in Sources */,
 				3321D6722DD416CE0083A238 /* EventModel.swift in Sources */,
 				3321D6762DD422A00083A238 /* EventsViewModel.swift in Sources */,
 				FA5587BF2DD31438002E375C /* EventsView.swift in Sources */,
+
 				3321D6742DD4212B0083A238 /* EventData.swift in Sources */,
+
+				FA5588002DD40872002E375C /* CommunityService.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +688,14 @@
 				version = 11.7.0;
 			};
 		};
+		FB9886152DD3F7FD00E877C7 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -661,6 +718,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA5587DA2DD32A35002E375C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		FB9886162DD3F7FD00E877C7 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB9886152DD3F7FD00E877C7 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

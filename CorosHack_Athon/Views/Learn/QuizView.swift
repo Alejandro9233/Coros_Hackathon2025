@@ -15,6 +15,8 @@ struct QuizView: View {
     let currentQuizIndex: Int
     let totalQuizzes: Int
     var presentationMode: Binding<PresentationMode>
+    @ObservedObject var courseViewModel: CourseViewModel
+    let courseId: String
     
     @State private var selectedAnswerIndex: Int? = nil
     @State private var isAnswerCorrect: Bool? = nil
@@ -22,13 +24,15 @@ struct QuizView: View {
     @State private var countdown: Int = 4
     private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    init(question: String, options: [String], correctAnswerIndex: Int, currentQuizIndex: Int, totalQuizzes: Int, presentationMode: Binding<PresentationMode>) {
+    init(question: String, options: [String], correctAnswerIndex: Int, currentQuizIndex: Int, totalQuizzes: Int, presentationMode: Binding<PresentationMode>, courseViewModel: CourseViewModel, courseId: String) {
         self.question = question
         self.options = options
         self.correctAnswerIndex = correctAnswerIndex
         self.currentQuizIndex = currentQuizIndex
         self.totalQuizzes = totalQuizzes
         self.presentationMode = presentationMode
+        self.courseViewModel = courseViewModel
+        self.courseId = courseId
     }
 
     var body: some View {
@@ -38,24 +42,23 @@ struct QuizView: View {
                     presentationMode.wrappedValue.dismiss()
                 }) {
                     Image(systemName: "xmark")
-                        .font(.title)
+                        .font(.title2)
                         .foregroundColor(.black)
+                        .padding()
                 }
-                
                 Spacer()
-                
+                Image(systemName: "graduationcap.circle.fill")
+                    .font(.title2)
+                    .foregroundColor(.purple)
                 Text("Learn")
                     .font(.headline)
                     .foregroundColor(.purple)
-                
                 Spacer()
-                
-                Button(action: {
-                    // Additional actions
-                }) {
+                Button(action: {}) {
                     Image(systemName: "ellipsis")
-                        .font(.title)
+                        .font(.title2)
                         .foregroundColor(.black)
+                        .padding()
                 }
             }
             .padding()
@@ -118,21 +121,24 @@ struct QuizView: View {
         if isCooldownActive {
             return
         }
-        
+
         withAnimation {
             selectedAnswerIndex = index
             isAnswerCorrect = (index == correctAnswerIndex)
         }
-        
+
         if isAnswerCorrect == true {
-            // Proceed to the next question
+            // ✅ If it's the last quiz, mark the course as completed
+            if currentQuizIndex == totalQuizzes {
+                courseViewModel.markCourseCompleted(courseId)
+            }
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                // Add logic to move to the next question
-                // For example, update the currentQuizIndex or navigate to the next view
+                // Advance or dismiss — your existing logic here
             }
         } else {
-            // Start cooldown for incorrect answer
             isCooldownActive = true
         }
     }
+
 }

@@ -2,8 +2,13 @@
 //  EventCard.swift
 //  CorosHack_Athon
 //
+
 //  Created by Regina Cavazos Valdes on 13/05/25.
 //
+//  Created by Alumno on 13/05/25.
+//
+
+
 import SwiftUI
 
 struct EventCard: View {
@@ -51,3 +56,12 @@ struct EventCard: View {
         .shadow(color: .black.opacity(0.05), radius: 4, x: 0, y: 2)
     }
 }
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("hola")
+            
+        }
+    }
+}
+

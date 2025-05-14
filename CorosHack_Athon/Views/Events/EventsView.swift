@@ -6,6 +6,7 @@
 import SwiftUI
 
 struct EventsView: View {
+
     @StateObject private var viewModel = EventsViewModel()
 
     var body: some View {
@@ -57,4 +58,17 @@ struct EventsView: View {
             .padding(.vertical)
         }
     }
+
+    
+    var body: some View {
+        NavigationView {
+            Text("hola")
+        }
+    }
+}
+
+
+#Preview {
+    EventsView()
+
 }

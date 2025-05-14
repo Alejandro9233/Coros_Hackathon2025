@@ -12,6 +12,7 @@ struct CourseCard: View {
     var courseName: String
     var duration: String
     var questions: Int // Changed to Int
+    var isCompleted: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -22,17 +23,36 @@ struct CourseCard: View {
                 .clipped()
                 .cornerRadius(15)
             
-            VStack(alignment: .leading, spacing: 5) {
-                Text(courseName)
-                    .font(.headline)
+            HStack() {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(courseName)
+                        .font(.headline)
+                    
+                    // Display the number of questions as a string
+                    Text("\(duration) • \(questions) Questions") // Updated to display questions as Int
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    
+                }
+                .padding([.leading, .trailing, .bottom])
                 
-                // Display the number of questions as a string
-                Text("\(duration) • \(questions) Questions") // Updated to display questions as Int
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                Spacer()
+                
+                if isCompleted {
+                    Image(systemName: "checkmark.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.green)
+                        .padding()
+                } else {
+                    Image(systemName: "xmark.circle.fill")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.red)
+                        .padding()
+                }
                 
             }
-            .padding([.leading, .trailing, .bottom])
         }
         .background(Color.white)
         .cornerRadius(15)
@@ -47,7 +67,8 @@ struct CourseCard_Previews: PreviewProvider {
             imageName: "world",
             courseName: "Intro to World",
             duration: "12 Minutes",
-            questions: 5 // Pass an Int for questions
+            questions: 5, // Pass an Int for questions
+            isCompleted: true
         )
     }
 }

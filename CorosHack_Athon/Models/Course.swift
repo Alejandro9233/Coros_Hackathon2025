@@ -15,3 +15,12 @@ struct Course: Identifiable, Codable {
     let questions: Int
 }
 
+struct DisplayCourse: Identifiable {
+    let course: Course
+    let isCompleted: Bool
+    let lotteryCheck: Bool
+    
+    var id: String { course.id } // Match Course ID type
+}
+
+
